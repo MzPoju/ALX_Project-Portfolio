@@ -1,0 +1,257 @@
+2. Architecture
+For the purpose of this project, the following framework will be employed in sequential order.
+1. 	Input the following parameters as touching the commercial building whose energy performance is to be determined.
+2. 	Calculations.			
+Building Description:
+The Application will be designed to collect the following information:
+Orientation of the building
+Presence of a Ceiling
+ Presence of External walls: Hollow sand-Crete blocks 
+Wall thickness: 
+ Wall paint color: 
+ Presence of Glass windows:
+Number of North facing windows: .
+Number of   West facing windows: 
+Number of  East facing glass
+Area of glass windows and aesthetic glass:
+Area of north facing windows: 
+Area of south facing windows:  
+Area of west facing windows: 
+Area of east facing glass: 				
+Doors:
+ Area of east facing glass doors:
+Area of north facing door:
+ Area of building floor 					
+Area of building roof  
+Building dimension 					
+Volume of the building 
+ 
+3.4 Calculations
+The application will have the following constants and co-efficients as standards which will be inherent constants that can be called upon when the applications wants to make some calculations:
+ U values (overall heat transfer coefficient)					
+U-value for wall: 3.18 W/𝑚 .K
+U-value for roof: 1.316 W/𝑚 .K
+U-value for door: 3.7 W/𝑚 .K						
+U-value for floor:
+U-value for glass: 1.2 W/𝑚 .K
+Shading Coefficient: 3.12 W/𝑚 .K	
+3.3 Heat Conducted via walls at different times (9am, 11am, 1pm and 3pm) will be computed as seen below by the application.			
+Q = U.A. (To – Tin)
+ Q = Heat conducted (watt)
+ U = Overall heat transfer coefficient (w/𝑚 . K)
+ A = Area of the wall surface exposed to solar radiation
+ To = Outdoor temperature (°C)
+ Tin = Indoor temperature (°C)
+ 1. North facing wall
+ (a) Heat conducted into the building via the north wall at 9am:
+ Overall heat transfer coefficient of 225mm hollow sand-Crete block = 3.18 w/𝑚 . K 
+Area of north facing wall: 
+Area of north facing door 
+Area of north facing windows
+Net area of north facing wall	Tin = Indoor temperature = Q (W)
+ (b) Heat conducted into the building via the north wall at 11am:
+ (c) Heat conducted into the building via the north wall at 1pm:
+ (d) Heat conducted into the building via the north wall at 3pm:
+ 2. South facing wall
+ (a) Heat gained into the building via the south facing wall at 9am:
+ Overall heat transfer coefficient of 225mm hollow sand-Crete block = 3.18 w/𝑚 . K Area of south facing wall: 13m × 4.2m = 54.6𝑚2
+ Area of south facing windows: 1.42𝑚2
+ Net area of south facing wall
+ To = Outdoor temperature = 	Tin = Indoor temperature =	
+(b) Heat gained into the building via the south facing wall at 11am:Q = 		
+(c) Heat gained into the building via the south facing wall at 1pm
+ (d) Heat gained into the building via the south facing wall at 3pm:
+
+ 3. East facing wall
+ (a) Heat gained into the building via the east facing wall at 9am:
+ Overall heat transfer coefficient of 225mm hollow sand-Crete block = 3.18 w/𝑚 . K Area of east facing wall:
+ Area of east facing glass:
+ Net area of east facing wall = 					
+Tin = Indoor temperature = 29°C
+ (b) Heat gained into the building via the east facing wall at 11am
+(c) Heat gained into the building via the east facing wall at 1pm
+(d) Heat gained into the building via the east facing wall at 3pm:					
+a) West facing wall
+ (e) Heat gained into the building via the west facing wall at 9am:
+ Overall heat transfer coefficient of 225mm hollow sand-Crete block = 3.18 w/𝑚 . K Area of west facing wall:
+ Area of west facing glass: 
+ Area of east facing glass doors: 
+ Net area of west facing wall = 
+To = Outdoor temperature = 33.95°C Tin = Indoor temperature =
+ (f) Heat gained into the building via the west facing wall at 11am:	Q = 479.6W		
+(g) Heat gained into the building via the west facing wall at 1pm:			
+Q = 3.18 × 31.42 × (36 – 30) Q = 599.49W
+(h) Heat gained into the building via the west facing wall at 3pm:
+Q = 3.18 × 31.42 × (35.6 – 29.6)
+ Q = 600W
+ 3.4.2 Heat Gained Due to Fenestration
+ Q = [( 𝐴𝑢𝑛𝑠𝑕𝑎𝑑𝑒𝑑 × U × 𝑆𝐻𝐺𝐹𝑚𝑎𝑥 × SC × CLF) + U.A. (To – Tin)] Q = 𝐴𝑢𝑛𝑠𝑕𝑎𝑑𝑒𝑑 × U [(To – Tin) + (SHGF × 𝑆𝐶 × 𝐶𝐿𝐹)]
+ Q = Heat conducted
+ U = Overall heat transfer coefficient of the unshaded glass
+ A = Area exposed to solar radiation
+ 𝑆𝐻𝐺𝐹𝑚𝑎𝑥 = Maximum Solar Heat Gain Factor
+ SC = Shading Coefficient
+ CLF = Cooling Load Factor
+ To = Outdoor temperature (°C)
+ Tin = Indoor temperature (°C)
+ 4. North facing glass
+ (a) Heat Gained Due to Fenestration for north glass
+ SHGF = 233, CLF = 0.53, Area = 7.98, SC = 0.86, U = 3.12 W/𝑚
+ Q = 7.98 × 3.12 [(33.95 – 29.00) + (233 × 0.53× 0.86)] = 2767.40W 5. South facing glass
+ (a) Heat Gained Due to Fenestration for south glass
+ SHGF = 120, CLF = 0.21, Area = 1.42, SC = 0.86
+ Q = 1.42 × 3.12 [(33.95 – 29.00) + (120 × 0.21× 0.86)] = 117.95W
+6. West facing glass
+ (a) Heat Gained Due to Fenestration for west glass
+ SHGF = 659, CLF = 0.11, Area = 0.67, SC = 0.86
+ Q = 0.67 × 3.12 [(33.95 – 29.00) + (659 × 0.11× 0.86)] = 140.67W 7. East facing glass
+ (a) Heat Gained Due to Fenestration for east glass
+ SHGF = 659, CLF = 0.5, Area = 5.98, SC = 0.86
+ Q = 5.98 × 3.12 [(33.95 – 29.00) + (659 × 0.5× 0.86)] = 5379.36W 3.4.3 Heat Gained by the Aluminium Roof at 9am:
+ Q = U.A. (To – Tin)
+ Q = Heat conducted (watt)
+ U = Overall heat transfer coefficient (w/𝑚 . K) = 1.316
+ A = Area of the roof = 13 × 11 = 143𝑚2
+ To = Outdoor temperature (°C) = 33.95
+ Tin = Indoor temperature (°C) = 29.00
+ Q = 1.316 × 143 × (30.6 – 27.6)
+ Q = 564.56 W
+ (a) Heat Gained by the Aluminium Roof at 11am:
+ Q = 1.316 × 143 × (33.6 – 28.8)
+ Q = 903.33 W
+ (b) Heat Gained by the Aluminium Roof at 1pm:
+ Q = 1.316 × 143 × (36 – 30)
+ Q = 1129.13 W
+(c) Heat Gained by the Aluminium Roof at 3pm:
+Q = 1.316 × 143 × (35.6 – 29.6)
+ Q = 1129.13 W
+ 3.4.4 Heat Conducted by the Floor
+ Q = U.A. (To – Tin)
+ Q = Heat conducted (watt)
+ U = Overall heat transfer coefficient for floor (w/𝑚 . K) = 1.2 A = Area of the roof = 13 × 11 = 143𝑚2
+ To = Outdoor temperature (°C) = 33.95
+ Tin = Indoor temperature (°C) = 29.00
+ Q = 1.2 × 143 × (33.95 – 29)
+ Q = 849.42 W				
+3.4.5 Heat Conducted by the north door				
+Q = U.A. (To – Tin)
+ Q = Heat conducted (watt)
+ U = Overall heat transfer coefficient of the north door (w/𝑚 . K) = 3.7 A = Area of north door = 2.1 × 2 = 4.2𝑚2
+ To = Outdoor temperature (°C) = 33.95
+ Tin = Indoor temperature (°C) = 29.00
+ Q = 3.7 × 4.2 × (33.95 – 29)
+ Q = 76.92W	
+3.4.6.1 Sensible Heat Load due to Occupants at 9am:				
+𝑄𝑠,𝑜𝑐𝑐𝑢𝑝𝑎𝑛𝑡𝑠 = (No. of people). (Sensible heat gain per person).CLF 𝑄𝑠,𝑜𝑐𝑐𝑢𝑝𝑎𝑛𝑡𝑠 = Heat released into the building space by the occupants (watt)				
+No. of people = 50
+ Sensible heat gain per person = 150 CLF = 0.85
+ 𝑄𝑠,𝑜𝑐𝑐𝑢𝑝𝑎𝑛𝑡𝑠 = 50 × 150 × 0.85				
+𝑄𝑠,𝑜𝑐𝑐𝑢𝑝𝑎𝑛𝑡𝑠 = 6375W
+ (a) Sensible Heat Load due to Occupants at 11am:				
+𝑄𝑠,𝑜𝑐𝑐𝑢𝑝𝑎𝑛𝑡𝑠 = 42 × 150 × 0.85 𝑄𝑠,𝑜𝑐𝑐𝑢𝑝𝑎𝑛𝑡𝑠 = 5355W				
+(b) Sensible Heat Load due to Occupants at 1pm:				
+𝑄𝑠,𝑜𝑐𝑐𝑢𝑝𝑎𝑛𝑡𝑠 = 48 × 150 × 0.85 𝑄𝑠,𝑜𝑐𝑐𝑢𝑝𝑎𝑛𝑡𝑠 = 6120W				
+(c) Sensible Heat Load due to Occupants at 3pm:				
+𝑄𝑠,𝑜𝑐𝑐𝑢𝑝𝑎𝑛𝑡𝑠 = 51 × 150 × 0.85				
+𝑄𝑠,𝑜𝑐𝑐𝑢𝑝𝑎𝑛𝑡𝑠 = 6502.5W
+ 3.4.6.2 Latent Heat Load due to Occupants at 9am 𝑄𝑙,𝑜𝑐𝑐𝑢𝑝𝑎𝑛𝑡𝑠 = (No. of people).(Latent heat gain per person) No. of people = 50
+ Latent heat gain per person = 73W				
+𝑄𝑙,𝑜𝑐𝑐𝑢𝑝𝑎𝑛𝑡𝑠 = 50 × 73 𝑄𝑙,𝑜𝑐𝑐𝑢𝑝𝑎𝑛𝑡𝑠 = 3650W
+(a) Latent Heat Load due to Occupants at 11am				
+𝑄𝑙,𝑜𝑐𝑐𝑢𝑝𝑎𝑛𝑡𝑠 = 42 × 73 𝑄𝑙,𝑜𝑐𝑐𝑢𝑝𝑎𝑛𝑡𝑠 = 3066W				
+(b) Latent Heat Load due to Occupants at 1pm				
+𝑄𝑙,𝑜𝑐𝑐𝑢𝑝𝑎𝑛𝑡𝑠 = 48 × 73 𝑄𝑙,𝑜𝑐𝑐𝑢𝑝𝑎𝑛𝑡𝑠 = 3504W				
+(c) Latent Heat Load due to Occupants at 3pm				
+𝑄𝑙,𝑜𝑐𝑐𝑢𝑝𝑎𝑛𝑡𝑠 = 51 × 73				
+𝑄𝑙,𝑜𝑐𝑐𝑢𝑝𝑎𝑛𝑡𝑠 = 3723W
+ 3.4.7 Heat Load due to Lighting
+ Number of 36watts fluorescent are 45
+ Number of 15watts fluorescent are 36
+ 𝑄𝑠,𝑙𝑖𝑔𝑕𝑡𝑖𝑛𝑔 = (Installed wattage). (Usage factor). (Ballast factor).CLF
+ Cooling load factors (CLF) at respective hours after light has been switched on are as follows: Source: ASHRAE 1997 Handbook						
+After one hour
+ After two hours
+ After four hours
+ After six hours
+ (a) Heat gained due to lighting at 9 am
+ (45 × 36 × 1 × 0.54) + (36 × 15 × 1 × 0.54) = 1166.4W (b) Heat gained due to lighting at 11 am				
+(45 × 36 × 1× 0.7) + (36 × 15 × 1 × 0.7) = 1512W 39				
+09 am 0.54 11 am 0.7 01 pm 0.81 03 pm 0.85						
+(c) Heat gained due to lighting at 1pm				
+(45 × 36 × 1× 0.81) + (36 × 15 × 1 × 0.81) = 1749.6W (d) Heat gained due to lighting at 3p.m
+ (45 × 36 × 1× 0.85) + (36 × 15 × 1 × 0.85) = 1836W				
+3.4.8 Heat Load due to Equipment and Appliances				
+The following appliances are used in the case study Source of rate of heat gain: ASHRAE 1997 Handbook
+Appliance/equipment Desktop computers Printer
+Copier
+Dispenser Television Scanner
+ Paper shredder Total
+Quantity 15
+Rate of heat gain 250 292 250 1750 490 120 200
+Total heat Q 3750W 1460W 500W 1750W 1470W 360W 200W 9490W
+3.4.9.1 Sensible Heat Load due to Infiltration
+𝑄𝑠,𝑖𝑛𝑓𝑖𝑙𝑡𝑟𝑎𝑡𝑖𝑜𝑛 = 𝑚𝑜 𝐶𝑝,𝑚 (𝑇𝑜 − 𝑇𝑖) = 𝑉𝑜 𝜌𝑜 𝐶𝑝,𝑚 (𝑇𝑜 − 𝑇𝑖) Where:
+ 𝑉𝑜 = (ACH). V / 3600 𝑚3/s
+40
+𝑚𝑜 = Mass flow rate
+ ACH = Air change per hour
+ V = Volume of the building
+ 𝑉𝑜 = Infiltration rate in 𝑚3/s
+ 𝜌𝑜 = Density in kg/𝑚3
+ 𝐶𝑝,𝑚 = Specific heat of moist, infiltrated air
+ 𝑇𝑜 = Outdoor temperature
+ 𝑇𝑖 = Indoor temperature
+ ACH = 3
+ Source of ACH: Table 19.8, page 609 of Refrigeration and air conditioning by R.S Khurmi and J.K Gupta
+ Therefore, 𝑉𝑜 = (3 × 606.6)/3600 𝑚3/s
+ Infiltration rate 𝑉𝑜 = 0.506𝑚3/s
+ Where density of gas has a constant value of 1.095kg/𝑚3 and volumetric flow rate is 0.506𝑚3/s
+Hence, mass flow rate 𝑚̇ is given from the relation 𝜌 = 𝑚𝑜 𝑉𝑜
+So,𝑚̇ =𝜌 × 𝑉 =1.095×0.506=0.554kg/s 𝑜𝑜
+𝐶𝑝,𝑚 = Specific heat of moist, infiltrated air = 1025
+ 𝑚𝑜 𝐶𝑝,𝑚 = 0.02044 (𝑇𝑜 − 𝑇𝑖)
+ So, heat gained due to infiltration at the four different hours in which data were collected are:
+(a) Heat Load due to Infiltration at 9a.m
+𝑚𝑜 𝐶𝑝,𝑚 (𝑇𝑜 − 𝑇𝑖) =𝑉𝑜 𝜌𝑜 𝐶𝑝,𝑚 (𝑇𝑜 − 𝑇𝑖) 0.5554 × 1021.6 (30.6 – 27.6) = 1707.9Watts
+(b) Heat Load due to Infiltration at 11a.m
+𝑚𝑜 𝐶𝑝,𝑚 (𝑇𝑜 − 𝑇𝑖) =𝑉𝑜 𝜌𝑜 𝐶𝑝,𝑚 (𝑇𝑜 − 𝑇𝑖) 0.5554 × 1021.6 (33.6 – 28.8) = 2723.5Watts
+(c) Heat Load due to Infiltration at 1p.m
+𝑚𝑜 𝐶𝑝,𝑚 (𝑇𝑜 − 𝑇𝑖) =𝑉𝑜 𝜌𝑜 𝐶𝑝,𝑚 (𝑇𝑜 − 𝑇𝑖) 0.5554 × 1021.6 (36 – 30.0) = 3404.3Watts
+(d) Heat Load due to Infiltration at 3p.m
+𝑚𝑜 𝐶𝑝,𝑚 (𝑇𝑜 − 𝑇𝑖) =𝑉𝑜 𝜌𝑜 𝐶𝑝,𝑚 (𝑇𝑜 − 𝑇𝑖) 0.5554 × 1021.6 (35.6 – 29.6) = 3404.3Watts	
+3.4.9.2 Latent Heat Load due to Infiltration					
+𝑄𝑙,𝑖𝑛𝑓𝑖𝑙𝑡𝑟𝑎𝑡𝑖𝑜𝑛 = 𝑚𝑜 h𝑓𝑔 (𝑊𝑜 − 𝑊𝑖) = 𝑉𝑜 𝜌𝑜 h𝑓𝑔 (𝑊𝑜 − 𝑊𝑖) Where:
+ 𝑚𝑜 = Mass flow rate
+ 𝑉𝑜 = Infiltration rate in 𝑚3/s					
+𝜌𝑜 = Density in kg/𝑚3
+ h𝑓𝑔 = latent heat of vaporization of water = 250
+ 𝑊𝑜 = Outdoor mass of air in kg/kg read from the psychometric chart 𝑊𝑖 = Indoor mass of air in kg/kg read from the psychometric chart
+42
+(a) Latent Heat Load due to Infiltration at 9am
+𝑚𝑜 h𝑓𝑔 (𝑊𝑜 − 𝑊𝑖) = 𝑉𝑜 𝜌𝑜 h𝑓𝑔 (𝑊𝑜 − 𝑊𝑖) 0.5554 × 2501 × (0.246 – 0.016) = 319.48Watt					
+(b) Latent Heat Load due to Infiltration at 11am
+𝑚𝑜 h𝑓𝑔 (𝑊𝑜 − 𝑊𝑖) = 𝑉𝑜 𝜌𝑜 h𝑓𝑔 (𝑊𝑜 − 𝑊𝑖)
+0.5554 × 2501 × (0.235 – 0.012) = 309.76Watts
+(c) Latent Heat Load due to Infiltration at 1pm 𝑚𝑜 h𝑓𝑔 (𝑊𝑜 − 𝑊𝑖) = 𝑉𝑜 𝜌𝑜 h𝑓𝑔 (𝑊𝑜 − 𝑊𝑖)	0.5554 × 2501 × (0.230 – 0.018) = 294.48Watts
+(d) Latent Heat Load due to Infiltration at 3pm
+𝑚𝑜 h𝑓𝑔 (𝑊𝑜 − 𝑊𝑖) = 𝑉𝑜 𝜌𝑜 h𝑓𝑔 (𝑊𝑜 − 𝑊𝑖) 0.5554 × 2501 × (0.227 – 0.014) = 295.87Watts
+					
+Total sensible and latent loads are obtained by summing-up all the sensible and latent load components as:
+ 𝑄𝑠𝑒𝑛𝑠𝑖𝑏𝑙𝑒,𝑡𝑜𝑡𝑎𝑙 = 700.79 + 837.11 + 633.25 + 494.58 + 2767.40 + 117.95 + 140.67 + 5379.36 + 931.54 + 849.42 + 76.92 + 6088.13 + 1566 + 9490 + 2810 = 31317.12W
+ 𝑄𝑙𝑎𝑡𝑒𝑛𝑡,𝑡𝑜𝑡𝑎𝑙 = 3485.75 + 1155.97 = 4640.97W
+ Total load on the building is:𝑄 𝑡𝑜𝑡𝑎𝑙 = 𝑄𝑠𝑒𝑛𝑠𝑖𝑏𝑙𝑒,𝑡𝑜𝑡𝑎𝑙 + 𝑄𝑙𝑎𝑡𝑒𝑛𝑡,𝑡𝑜𝑡𝑎𝑙 31317.12 + 4640.97 = 35958.09W
+Room Sensible Heat Factor (RSHF) is given by 𝑄𝑠𝑒𝑛𝑠𝑖𝑏𝑙𝑒,𝑡𝑜𝑡𝑎𝑙 / 𝑄𝑡𝑜𝑡𝑎𝑙
+ = 31317.12 /35958.09 RSHF = 0.87
+ Therefore, the required cooling capacity, ventilation has been neglected as the calculated infiltration can take care of the small ventilation requirement. Hence, using a factor of safety of 1.25, the required cooling capacity is: 35958.09 × 1.25 = 44948W = 44.9KW 
+
+3. No APIs
+4.	In a section named “Data Model”:
+Create a data model diagram to clarify how data will be stored
+
+5. User Stories
+Research
+As a Fulminologist, I want to analyse the impact of lightning on buildings so that I can better understand how to protect the environment and resources from future occurrences.
+Energy bills
+As a Government worker, I want to browse on how the energy efficiency of appliances can be reduced so that lower energy bills are paid by households.
+Cost effectiveness
+As a user, I can opt for a more cost effective means of getting energy solutions.
