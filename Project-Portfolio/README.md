@@ -7,3 +7,4 @@ The chosen software program requires HVAC (Heating, ventilation, Air-conditionin
 This project seeks to regulate and maintain indoor temperature of a building as well as tackle the problems of cracking and deformation of building walls which could be a result of imbalanced indoor and outdoor temperatures.
 
 This will be beneficial to everyone, from owners of buildings to the contractors and the occupants.
+The calculations are included in the attached files.
